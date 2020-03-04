@@ -74,10 +74,10 @@ class Block
             $response['block_id'] = $this->block_id;
         }
         if (!empty($this->text)) {
-            $response['text'] = $this->text;
+            $response['text'] = $this->text->toArray();
         }
         if (!empty($this->accessory)) {
-            $response['accessory'] = $this->accessory;
+            $response['accessory'] = $this->accessory->toArray();
         }
         return $response;
     }
