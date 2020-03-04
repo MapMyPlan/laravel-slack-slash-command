@@ -6,7 +6,7 @@ namespace MapMyPlan\SlashCommand;
 
 class BlockAccessory
 {
-    protected $type;
+    protected $type = 'image';
     protected $image_url;
     protected $alt_text = '';
 

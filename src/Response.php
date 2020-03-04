@@ -6,6 +6,7 @@ use GuzzleHttp\Client;
 use Illuminate\Http\Response as IlluminateResponse;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use function Clue\StreamFilter\fun;
 
 class Response
 {
@@ -27,7 +28,7 @@ class Response
     /** @var Collection */
     protected $attachments;
 
-    /** @var Collection  */
+    /** @var Collection */
     protected $blocks;
 
     /** @var Client */
@@ -56,7 +57,7 @@ class Response
     }
 
     /**
-     * @param string $text
+     * @param  string  $text
      *
      * @return $this
      */
@@ -104,13 +105,13 @@ class Response
     }
 
     /**
-     * @param array|Attachment  $attachments
+     * @param  array|Attachment  $attachments
      *
      * @return $this
      */
     public function withAttachments($attachments)
     {
-        if (! is_array($attachments)) {
+        if (!is_array($attachments)) {
             $attachments = [$attachments];
         }
 
@@ -123,7 +124,7 @@ class Response
 
     public function withBlocks($blocks)
     {
-        if (! is_array($blocks)) {
+        if (!is_array($blocks)) {
             $blocks = [$blocks];
         }
 
@@ -135,7 +136,7 @@ class Response
     }
 
     /**
-     * @param string $channelName
+     * @param  string  $channelName
      *
      * @return $this
      */
@@ -153,7 +154,7 @@ class Response
     /**
      * Set the icon (either URL or emoji) we will post as.
      *
-     * @param string $icon
+     * @param  string  $icon
      *
      * @return $this
      */
@@ -200,12 +201,15 @@ class Response
             'unfurl_media' => true,
             'mrkdwn' => true,
             'response_type' => $this->responseType,
+            'blocks' => $this->blocks->map(function (Block $block) {
+                return $block->toArray();
+            })->toArray(),
             'attachments' => $this->attachments->map(function (Attachment $attachment) {
                 return $attachment->toArray();
             })->toArray(),
         ];
 
-        if (! empty($this->icon)) {
+        if (!empty($this->icon)) {
             $payload[$this->getIconType()] = $this->icon;
         }
 

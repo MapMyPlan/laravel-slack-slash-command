@@ -63,4 +63,22 @@ class Block
         }
         return $this;
     }
+
+    public function toArray()
+    {
+        $response = [
+            'type' => $this->type,
+        ];
+
+        if (!empty($this->block_id)) {
+            $response['block_id'] = $this->block_id;
+        }
+        if (!empty($this->text)) {
+            $response['text'] = $this->text;
+        }
+        if (!empty($this->accessory)) {
+            $response['accessory'] = $this->accessory;
+        }
+        return $response;
+    }
 }
