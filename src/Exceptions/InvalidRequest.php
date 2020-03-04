@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\SlashCommand\Exceptions;
+namespace MapMyPlan\SlashCommand\Exceptions;
 
 class InvalidRequest extends SlackSlashCommandException
 {

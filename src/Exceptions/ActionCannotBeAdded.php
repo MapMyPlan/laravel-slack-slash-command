@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\SlashCommand\Exceptions;
+namespace MapMyPlan\SlashCommand\Exceptions;
 
-use Spatie\SlashCommand\AttachmentAction;
+use MapMyPlan\SlashCommand\AttachmentAction;
 
 class ActionCannotBeAdded extends SlackSlashCommandException
 {

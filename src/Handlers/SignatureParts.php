@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\SlashCommand\Handlers;
+namespace MapMyPlan\SlashCommand\Handlers;
 
 use Illuminate\Support\Str;
-use Spatie\SlashCommand\Exceptions\InvalidSignature;
+use MapMyPlan\SlashCommand\Exceptions\InvalidSignature;
 
 class SignatureParts
 {

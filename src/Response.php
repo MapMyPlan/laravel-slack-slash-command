@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\SlashCommand;
+namespace MapMyPlan\SlashCommand;
 
 use GuzzleHttp\Client;
 use Illuminate\Http\Response as IlluminateResponse;
@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class Response
 {
-    /** @var \Spatie\SlashCommand\Request */
+    /** @var \MapMyPlan\SlashCommand\Request */
     protected $request;
 
     /** @var string */
@@ -79,7 +79,7 @@ class Response
     }
 
     /**
-     * @param \Spatie\SlashCommand\Attachment $attachment
+     * @param \MapMyPlan\SlashCommand\Attachment $attachment
      *
      * @return $this
      */
@@ -91,7 +91,7 @@ class Response
     }
 
     /**
-     * @param array|\Spatie\SlashCommand\Attachment $attachments
+     * @param array|\MapMyPlan\SlashCommand\Attachment $attachments
      *
      * @return $this
      */

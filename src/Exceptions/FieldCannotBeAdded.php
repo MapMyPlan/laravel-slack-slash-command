@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\SlashCommand\Exceptions;
+namespace MapMyPlan\SlashCommand\Exceptions;
 
-use Spatie\SlashCommand\AttachmentField;
+use MapMyPlan\SlashCommand\AttachmentField;
 
 class FieldCannotBeAdded extends SlackSlashCommandException
 {

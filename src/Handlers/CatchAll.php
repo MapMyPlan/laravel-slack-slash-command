@@ -1,21 +1,21 @@
 <?php
 
-namespace Spatie\SlashCommand\Handlers;
+namespace MapMyPlan\SlashCommand\Handlers;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Spatie\SlashCommand\Attachment;
-use Spatie\SlashCommand\AttachmentField;
-use Spatie\SlashCommand\HandlesSlashCommand;
-use Spatie\SlashCommand\Request;
-use Spatie\SlashCommand\Response;
+use MapMyPlan\SlashCommand\Attachment;
+use MapMyPlan\SlashCommand\AttachmentField;
+use MapMyPlan\SlashCommand\HandlesSlashCommand;
+use MapMyPlan\SlashCommand\Request;
+use MapMyPlan\SlashCommand\Response;
 
 class CatchAll extends BaseHandler
 {
     /**
      * If this function returns true, the handle method will get called.
      *
-     * @param \Spatie\SlashCommand\Request $request
+     * @param \MapMyPlan\SlashCommand\Request $request
      *
      * @return bool
      */
@@ -29,9 +29,9 @@ class CatchAll extends BaseHandler
      * within three seconds after the slash command was issued. If
      * there is more time needed, dispatch a job.
      *
-     * @param \Spatie\SlashCommand\Request $request
+     * @param \MapMyPlan\SlashCommand\Request $request
      *
-     * @return \Spatie\SlashCommand\Response
+     * @return \MapMyPlan\SlashCommand\Response
      */
     public function handle(Request $request): Response
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\SlashCommand;
+namespace MapMyPlan\SlashCommand;
 
 class AttachmentField
 {

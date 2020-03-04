@@ -1,21 +1,21 @@
 <?php
 
-namespace Spatie\SlashCommand;
+namespace MapMyPlan\SlashCommand;
 
 use Exception;
 use Illuminate\Config\Repository;
 use Illuminate\Http\Request as IlluminateRequest;
 use Illuminate\Http\Response as IlluminateResponse;
 use Illuminate\Routing\Controller as IlluminateController;
-use Spatie\SlashCommand\Exceptions\InvalidHandler;
-use Spatie\SlashCommand\Exceptions\InvalidRequest;
-use Spatie\SlashCommand\Exceptions\RequestCouldNotBeHandled;
-use Spatie\SlashCommand\Exceptions\SlackSlashCommandException;
-use Spatie\SlashCommand\Handlers\SignatureHandler;
+use MapMyPlan\SlashCommand\Exceptions\InvalidHandler;
+use MapMyPlan\SlashCommand\Exceptions\InvalidRequest;
+use MapMyPlan\SlashCommand\Exceptions\RequestCouldNotBeHandled;
+use MapMyPlan\SlashCommand\Exceptions\SlackSlashCommandException;
+use MapMyPlan\SlashCommand\Handlers\SignatureHandler;
 
 class Controller extends IlluminateController
 {
-    /** @var \Spatie\SlashCommand\Request */
+    /** @var \MapMyPlan\SlashCommand\Request */
     protected $request;
 
     /** @var \Illuminate\Support\Collection */
@@ -84,9 +84,9 @@ class Controller extends IlluminateController
     }
 
     /**
-     * @return \Spatie\SlashCommand\Handlers\BaseHandler
+     * @return \MapMyPlan\SlashCommand\Handlers\BaseHandler
      *
-     * @throws \Spatie\SlashCommand\Exceptions\RequestCouldNotBeHandled
+     * @throws \MapMyPlan\SlashCommand\Exceptions\RequestCouldNotBeHandled
      */
     protected function determineHandler()
     {

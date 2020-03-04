@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\SlashCommand\Exceptions;
+namespace MapMyPlan\SlashCommand\Exceptions;
 
-use Spatie\SlashCommand\Request;
+use MapMyPlan\SlashCommand\Request;
 
 class RequestCouldNotBeHandled extends SlackSlashCommandException
 {

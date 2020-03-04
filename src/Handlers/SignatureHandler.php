@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\SlashCommand\Handlers;
+namespace MapMyPlan\SlashCommand\Handlers;
 
 use Illuminate\Console\Parser;
 use Illuminate\Support\Str;
-use Spatie\SlashCommand\Exceptions\InvalidHandler;
-use Spatie\SlashCommand\Exceptions\InvalidInput;
-use Spatie\SlashCommand\Request;
+use MapMyPlan\SlashCommand\Exceptions\InvalidHandler;
+use MapMyPlan\SlashCommand\Exceptions\InvalidInput;
+use MapMyPlan\SlashCommand\Request;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Exception\RuntimeException;
 use Symfony\Component\Console\Helper\DescriptorHelper;

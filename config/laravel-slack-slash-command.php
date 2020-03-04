@@ -33,9 +33,9 @@ return [
         //add your own handlers here
 
         //this handler will display instructions on how to use the various commands.
-        Spatie\SlashCommand\Handlers\Help::class,
+        MapMyPlan\SlashCommand\Handlers\Help::class,
 
         //this handler will respond with a `Could not handle command` message.
-        Spatie\SlashCommand\Handlers\CatchAll::class,
+        MapMyPlan\SlashCommand\Handlers\CatchAll::class,
     ],
 ];

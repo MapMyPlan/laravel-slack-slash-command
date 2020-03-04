@@ -1,15 +1,15 @@
 <?php
 
-namespace Spatie\SlashCommand\Jobs;
+namespace MapMyPlan\SlashCommand\Jobs;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Spatie\SlashCommand\HandlesSlashCommand;
-use Spatie\SlashCommand\Request;
-use Spatie\SlashCommand\Response;
+use MapMyPlan\SlashCommand\HandlesSlashCommand;
+use MapMyPlan\SlashCommand\Request;
+use MapMyPlan\SlashCommand\Response;
 
 abstract class SlashCommandResponseJob implements ShouldQueue, HandlesSlashCommand
 {
-    /** @var \Spatie\SlashCommand\Request */
+    /** @var \MapMyPlan\SlashCommand\Request */
     public $request;
 
     public function getResponse(): Response

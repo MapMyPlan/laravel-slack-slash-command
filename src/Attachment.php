@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\SlashCommand;
+namespace MapMyPlan\SlashCommand;
 
 use DateTime;
 use Illuminate\Support\Collection;
-use Spatie\SlashCommand\Exceptions\ActionCannotBeAdded;
-use Spatie\SlashCommand\Exceptions\FieldCannotBeAdded;
+use MapMyPlan\SlashCommand\Exceptions\ActionCannotBeAdded;
+use MapMyPlan\SlashCommand\Exceptions\FieldCannotBeAdded;
 
 class Attachment
 {
@@ -376,11 +376,11 @@ class Attachment
     /**
      * Add a field to the attachment.
      *
-     * @param \Spatie\SlashCommand\AttachmentField|array $field
+     * @param \MapMyPlan\SlashCommand\AttachmentField|array $field
      *
      * @return $this
      *
-     * @throws \Spatie\SlashCommand\Exceptions\FieldCannotBeAdded
+     * @throws \MapMyPlan\SlashCommand\Exceptions\FieldCannotBeAdded
      */
     public function addField($field)
     {
@@ -449,10 +449,10 @@ class Attachment
     }
 
     /**
-     * @param \Spatie\SlashCommand\AttachmentAction|array $action
+     * @param \MapMyPlan\SlashCommand\AttachmentAction|array $action
      *
      * @return $this
-     * @throws \Spatie\SlashCommand\Exceptions\ActionCannotBeAdded
+     * @throws \MapMyPlan\SlashCommand\Exceptions\ActionCannotBeAdded
      */
     public function addAction($action)
     {

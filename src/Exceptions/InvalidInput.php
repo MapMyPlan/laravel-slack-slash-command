@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\SlashCommand\Exceptions;
+namespace MapMyPlan\SlashCommand\Exceptions;
 
 use Exception;
-use Spatie\SlashCommand\Attachment;
-use Spatie\SlashCommand\Handlers\SignatureHandler;
-use Spatie\SlashCommand\Request;
-use Spatie\SlashCommand\Response;
+use MapMyPlan\SlashCommand\Attachment;
+use MapMyPlan\SlashCommand\Handlers\SignatureHandler;
+use MapMyPlan\SlashCommand\Request;
+use MapMyPlan\SlashCommand\Response;
 
 class InvalidInput extends SlackSlashCommandException
 {

@@ -1,17 +1,22 @@
 {
-    "name": "spatie/laravel-slack-slash-command-slash-command",
+    "name": "mapmyplan/laravel-slack-slash-command-slash-command",
     "description": "Make a Laravel app respond to a slash command from Slack",
     "keywords": [
         "spatie",
         "laravel-slack"
     ],
-    "homepage": "https://github.com/spatie/laravel-slack-slash-command",
+    "homepage": "https://github.com/MapMyPlan/laravel-slack-slash-command",
     "license": "MIT",
     "authors": [
         {
             "name": "Freek Van der Herten",
             "email": "freek@spatie.be",
             "homepage": "https://spatie.be",
+            "role": "Developer"
+        },
+        {
+            "name": "Rubens Peculis",
+            "email": "rubens@mapmyplan.com",
             "role": "Developer"
         }
     ],
@@ -32,21 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\SlashCommand\\": "src"
+            "MapMyPlan\\SlashCommand\\": "src"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Spatie\\SlashCommand\\Test\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\SlashCommand\\SlashCommandServiceProvider"
+                "MapMyPlan\\SlashCommand\\SlashCommandServiceProvider"
             ]
         }
     }

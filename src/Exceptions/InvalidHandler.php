@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\SlashCommand\Exceptions;
+namespace MapMyPlan\SlashCommand\Exceptions;
 
-use Spatie\SlashCommand\Handlers\BaseHandler;
+use MapMyPlan\SlashCommand\Handlers\BaseHandler;
 
 class InvalidHandler extends SlackSlashCommandException
 {

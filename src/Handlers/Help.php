@@ -1,14 +1,14 @@
 <?php
 
-namespace Spatie\SlashCommand\Handlers;
+namespace MapMyPlan\SlashCommand\Handlers;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use Spatie\SlashCommand\Attachment;
-use Spatie\SlashCommand\AttachmentField;
-use Spatie\SlashCommand\HandlesSlashCommand;
-use Spatie\SlashCommand\Request;
-use Spatie\SlashCommand\Response;
+use MapMyPlan\SlashCommand\Attachment;
+use MapMyPlan\SlashCommand\AttachmentField;
+use MapMyPlan\SlashCommand\HandlesSlashCommand;
+use MapMyPlan\SlashCommand\Request;
+use MapMyPlan\SlashCommand\Response;
 
 class Help extends SignatureHandler
 {
@@ -19,9 +19,9 @@ class Help extends SignatureHandler
     /**
      * Handle the given request.
      *
-     * @param \Spatie\SlashCommand\Request $request
+     * @param \MapMyPlan\SlashCommand\Request $request
      *
-     * @return \Spatie\SlashCommand\Response
+     * @return \MapMyPlan\SlashCommand\Response
      */
     public function handle(Request $request): Response
     {
@@ -69,7 +69,7 @@ class Help extends SignatureHandler
 
         $helpRequest->text = $command;
 
-        /** @var \Spatie\SlashCommand\Handlers $handler */
+        /** @var \MapMyPlan\SlashCommand\Handlers $handler */
         $handler = $handlers->filter(function (HandlesSlashCommand $handler) use ($helpRequest) {
             return $handler->canHandle($helpRequest);
         })

@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\SlashCommand;
+namespace MapMyPlan\SlashCommand;
 
-use Spatie\SlashCommand\Exceptions\InvalidConfirmationHash;
+use MapMyPlan\SlashCommand\Exceptions\InvalidConfirmationHash;
 
 class AttachmentAction
 {
@@ -140,8 +140,8 @@ class AttachmentAction
      *
      * @param array $confirmation
      *
-     * @return \Spatie\SlashCommand\AttachmentAction
-     * @throws \Spatie\SlashCommand\Exceptions\InvalidConfirmationHash
+     * @return \MapMyPlan\SlashCommand\AttachmentAction
+     * @throws \MapMyPlan\SlashCommand\Exceptions\InvalidConfirmationHash
      */
     public function setConfirmation(array $confirmation)
     {
