@@ -4,11 +4,12 @@ namespace MapMyPlan\SlashCommand;
 
 use GuzzleHttp\Client;
 use Illuminate\Http\Response as IlluminateResponse;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 class Response
 {
-    /** @var \MapMyPlan\SlashCommand\Request */
+    /** @var Request */
     protected $request;
 
     /** @var string */
@@ -23,10 +24,13 @@ class Response
     /** @var string */
     protected $icon = '';
 
-    /** @var \Illuminate\Support\Collection */
+    /** @var Collection */
     protected $attachments;
 
-    /** @var \GuzzleHttp\Client */
+    /** @var Collection  */
+    protected $blocks;
+
+    /** @var Client */
     protected $client;
 
     public static function create(Request $request): self
@@ -46,7 +50,9 @@ class Response
 
         $this->displayResponseToUserWhoTypedCommand();
 
-        $this->attachments = new \Illuminate\Support\Collection();
+        $this->attachments = new Collection();
+
+        $this->blocks = new Collection();
     }
 
     /**
@@ -79,7 +85,7 @@ class Response
     }
 
     /**
-     * @param \MapMyPlan\SlashCommand\Attachment $attachment
+     * @param  Attachment  $attachment
      *
      * @return $this
      */
@@ -90,8 +96,15 @@ class Response
         return $this;
     }
 
+    public function withBlock(Block $block)
+    {
+        $this->blocks->push($block);
+
+        return $this;
+    }
+
     /**
-     * @param array|\MapMyPlan\SlashCommand\Attachment $attachments
+     * @param array|Attachment  $attachments
      *
      * @return $this
      */
@@ -103,6 +116,19 @@ class Response
 
         foreach ($attachments as $attachment) {
             $this->withAttachment($attachment);
+        }
+
+        return $this;
+    }
+
+    public function withBlocks($blocks)
+    {
+        if (! is_array($blocks)) {
+            $blocks = [$blocks];
+        }
+
+        foreach ($blocks as $block) {
+            $this->withBlock($block);
         }
 
         return $this;
